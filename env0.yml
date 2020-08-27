@@ -9,7 +9,7 @@ deploy:
     terraformPlan:
       before:
         - ls -ltr $HOME/.terraform.d/plugins/linux_amd64
-        - ls ./.terraform/plugins
+        - ls ./.terraform/plugins/linux_amd64
     terraformApply:
       before:
         - export CGO_ENABLED=0
