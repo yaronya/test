@@ -1,5 +1,5 @@
 terraform {
-  version = "0.12.22"
+  required_version = "0.12.26"
 }
 
 resource "null_resource" "null" {
