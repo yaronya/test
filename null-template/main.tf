@@ -8,7 +8,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "test" {
-  bucket = "env0-s3-${random_string.random.result}"
+  bucket = "env0-s3-test-bucket-123"
   acl    = "public-read"
   force_destroy = true
 }
