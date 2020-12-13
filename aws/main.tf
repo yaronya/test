@@ -4,7 +4,8 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "aws_instance" "test" {
-  ami = "ami-0c654c3ab463d22f6"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "website_bucket" {
+  bucket = "yaron-test-bucket"
+  acl    = "public-read"
+  force_destroy = true
 }
