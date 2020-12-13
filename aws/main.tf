@@ -12,6 +12,6 @@ resource "random_string" "random" {
 
 resource "aws_s3_bucket" "yaron" {
   bucket = "yaron-test-${random_string.random.result}"
-  acl    = "bla"
+  acl    = "public-read"
   force_destroy = true
 }
