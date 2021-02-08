@@ -1,10 +1,10 @@
-variable "name" {
-    default = "world"
-}
+resource "random_pet" "my_pet" {}
 
-resource "null_resource" "null" {
+module "private-module" {
+    source = "git::git@github.com:yaronya/blueprints-private-tf-module.git"
+    name = "${random_pet.my_pet.id}"
 }
 
 output "message" {
-  value = "Hello ${var.name}!"
+  value = "${module.private-module.message}"
 }
