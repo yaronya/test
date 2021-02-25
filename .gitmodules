@@ -1,4 +1,0 @@
-[submodule "blueprints-private-tf-module"]
-	path = blueprints-private-tf-module
-	url = git@github.com:yaronya/blueprints-private-tf-module.git
-	branch = main
