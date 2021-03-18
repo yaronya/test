@@ -5,5 +5,5 @@ deploy:
     setupVariables:
       after: 
         - echo "Sleeping..."
-        - sleep 60
+        - sleep 1200
         - echo "Good morning!"
