@@ -1,11 +1,8 @@
 version: 1
 deploy:
     steps:
-        setupVariables:
+        terraformPlan:
           after:
-            - aws --version
-            - gcloud --version
-            - az --version
             - env
 destroy:
     onCompletion:
