@@ -1,7 +1,7 @@
 version: 1
 deploy:
     steps:
-        terraformPlan:
+        setupVariables:
           after:
             - env
 destroy:
