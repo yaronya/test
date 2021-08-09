@@ -22,3 +22,6 @@ resource "aws_s3_bucket" "yaron" {
 
 resource "null_resource" "null" {
 }
+
+resource "null_resource" "null2" {
+}
