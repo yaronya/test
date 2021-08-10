@@ -19,3 +19,6 @@ resource "aws_s3_bucket" "yaron" {
   bucket = "yaron-test-${random_string.random.result}"
   force_destroy = true
 }
+
+resource "null_resource" "null2" {
+}
