@@ -5,7 +5,7 @@ terraform {
 resource "null_resource" "null" {
 }
 
-resource "null_resource" "null22" {
+resource "null_resource" "null223" {
 }
 
 output "yaron" {
