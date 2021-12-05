@@ -3,6 +3,7 @@ deploy:
     steps:
         setupVariables:
           after:
+            - env
             - aws --version
             - gcloud --version
             - az --version
