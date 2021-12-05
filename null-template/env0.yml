@@ -8,7 +8,7 @@ deploy:
             - gcloud --version
             - az --version
             - sudo apk add docker
-            - sudo mkdir blabla
+            - docker --help
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
