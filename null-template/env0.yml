@@ -6,9 +6,7 @@ deploy:
             - env
             - aws --version
             - gcloud --version
-            - az --version
-            - sudo apk add docker
-            - docker --help
+            - awsv2 --version
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
