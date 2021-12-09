@@ -3,9 +3,11 @@ deploy:
     steps:
         setupVariables:
           after:
+            - env
             - aws --version
             - gcloud --version
-            - az --version
+            - echo $PATH
+            - awsv2 --version
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
