@@ -8,6 +8,7 @@ deploy:
             - az --version
             - sudo ps -ef
             - echo $PPID
+            - sudo cat /proc/1/environ
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
