@@ -7,8 +7,7 @@ deploy:
             - aws --version
             - gcloud --version
             - echo $PATH
-            - which awsv2
-            - awsv2 --version
+            - aws sts get-caller-identity
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
