@@ -1,10 +1,4 @@
-resource "random_pet" "my_pet" {}
-
-module "private-module" {
-    source = "git::git@github.com:yaronya/blueprints-private-tf-module.git"
-    name = "${random_pet.my_pet.id}"
-}
-
-output "message" {
-  value = "${module.private-module.message}"
+module "private" {
+  source = "api-dev.dev.env0.com/78937575-9722-4543-98bb-c14890cff69f/private/yaronya"
+  version = "v0.0.1"
 }
