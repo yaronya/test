@@ -3,7 +3,7 @@ deploy:
     steps:
         setupVariables:
           after:
-            - YARON=bla >> $ENVO_ENV
+            - echo YARON=bla >> $ENVO_ENV
         terraformInit:
           after:
             - echo $YARON
