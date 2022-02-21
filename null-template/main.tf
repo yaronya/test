@@ -20,5 +20,5 @@ resource "aws_s3_bucket" "yaron" {
   force_destroy = true
 }
 
-resource "null_resource" "null2" {
+resource "null_resource" "null23" {
 }
