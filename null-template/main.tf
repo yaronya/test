@@ -8,6 +8,16 @@ resource "null_resource" "null" {
 resource "null_resource" "null223" {
 }
 
+variable "numbervar" {
+  type    = number
+  default = 1
+}
+
+variable "listvar" {
+  type    = list
+  default = [1,2,3]
+}
+
 output "yaron" {
   value = "blabla"
 }
