@@ -20,7 +20,7 @@ variable "listvar" {
 
 variable "bool" {
   type = bool
-  default = true
+  default = false
 }
 
 output "yaron" {
