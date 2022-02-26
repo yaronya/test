@@ -26,3 +26,7 @@ variable "bool" {
 output "yaron" {
   value = "blabla"
 }
+
+output "yesorno" {
+  value = var.bool ? "yes" : "no"
+}
