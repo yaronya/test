@@ -18,6 +18,11 @@ variable "listvar" {
   default = [1,2,3]
 }
 
+variable "bool" {
+  type = bool
+  default = true
+}
+
 output "yaron" {
   value = "blabla"
 }
