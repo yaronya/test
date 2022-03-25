@@ -15,7 +15,7 @@ resource "random_string" "random" {
 }
 
 
-resource "aws_s3_bucket" "yaron2" {
+resource "aws_s3_bucket" "yaron4" {
   bucket = "yaron-test-${random_string.random.result}"
   force_destroy = true
 }
