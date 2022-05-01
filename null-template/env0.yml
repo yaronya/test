@@ -4,10 +4,8 @@ deploy:
         setupVariables:
           after:
             - env
-            - aws --version
-            - gcloud --version
-            - echo $PATH
-            - aws sts get-caller-identity
+            - kubectl version
+            - which kubectl
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
