@@ -4,7 +4,7 @@ deploy:
         setupVariables:
           after:
             - env
-            - kubectl version
+            - kubectl version --client
             - which kubectl
 destroy:
     onCompletion:
