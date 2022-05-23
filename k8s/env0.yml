@@ -4,6 +4,8 @@ deploy:
   steps:
     setupVariables:
       after: &login-k8s
+        - which dyff
+        - env
         - aws eks update-kubeconfig --name $CLUSTER_NAME
 
 destroy:
