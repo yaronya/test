@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: yaron-test-secret
+  name: yaron-test-secret111
 data:
   bla: YmFzZTY0
   bla2: YmFzZTY0
@@ -9,7 +9,7 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: yaron-test-secret1
+  name: yaron-test-secret112
 data:
   bla: YmFzZTY0
   bla2: YmFzZTY0
@@ -18,7 +18,7 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: yaron-test-secret2
+  name: yaron-test-secret113
 data:
   bla: YmFzZTY0
   bla2: YmFzZTY0
