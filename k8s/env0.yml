@@ -4,7 +4,7 @@ deploy:
   steps:
     setupVariables:
       after: &login-k8s
-        - which dyff
+        - ls dyff
         - env
         - aws eks update-kubeconfig --name $CLUSTER_NAME
 
