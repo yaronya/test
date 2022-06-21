@@ -25,3 +25,14 @@ metadata:
 data:
   bla: YmFzZTY0
   bla2: YmFzZTY0
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web
+spec:
+  containers:
+    - name: web
+      image: nginx
