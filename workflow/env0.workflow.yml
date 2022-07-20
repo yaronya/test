@@ -1,7 +1,7 @@
 environments:
   eks:
     name: eks
-    templateName: ‘EKS Cluster'
+    templateName: 'EKS Cluster'
   prometheus:
     name: prometheus
     templateName: 'Prometheus Operator'
