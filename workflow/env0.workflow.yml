@@ -2,8 +2,13 @@ environments:
   eks:
     name: eks
     templateName: 'EKS Cluster'
-  prometheus:
-    name: prometheus
-    templateName: 'Prometheus Operator'
+  prometheus-prereq:
+    name: prometheus-prereq
+    templateName: 'Prometheus Operator - Prerequisites'
     needs:
       - eks
+  prometheus-install:
+    name: prometheus-install
+    templateName: 'Prometheus Operator - Installation'
+    needs:
+      - prometheus-prereq
