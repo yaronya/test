@@ -14,7 +14,7 @@ resource "random_string" "random" {
   min_lower = "16"
 }
 
-resource "aws_s3_bucket" "yaron245599" {
+resource "aws_s3_bucket" "yaron2453232599" {
   bucket = "yaron-tessst-${random_string.random.result}"
   force_destroy = true
 }
