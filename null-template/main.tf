@@ -1,9 +1,20 @@
 terraform {
-  required_version = "0.12.26"
+  required_providers {
+    aws        = "~> 3.70.0"
+  }
 }
 
-resource "null_resource" "null" {
+provider "aws" {
+  region  = "us-east-1"
 }
 
-resource "null_resource" "null2" {
+resource "random_string" "random" {
+  length = "16"
+  special = "false"
+  min_lower = "16"
+}
+
+resource "aws_s3_bucket" "yaron2453232599" {
+  bucket = "yaron-tessst-${random_string.random.result}"
+  force_destroy = true
 }

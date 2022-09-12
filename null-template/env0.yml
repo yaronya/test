@@ -3,9 +3,9 @@ deploy:
     steps:
         setupVariables:
           after:
-            - aws --version
-            - gcloud --version
-            - az --version
+            - env
+            - kubectl version --client
+            - which kubectl
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
