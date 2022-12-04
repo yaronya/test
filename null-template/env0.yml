@@ -4,12 +4,12 @@ deploy:
         setupVariables:
           after:
             - name: "I'm testing how this runs"
-            - run: env
+              run: env
             - name: "Another test that should run in the middle"
-            - run: echo foo
+              run: echo foo
             - echo no-name
             - name: "Multiline script"
-            - run: |
+              run: |
               echo foo
               echo bar
               echo bla
