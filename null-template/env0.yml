@@ -6,7 +6,7 @@ deploy:
             - name: "I'm testing how this runs"
               run: env
             - name: "Another test that should run in the middle"
-              run: echo foo
+              run: exit 1
             - echo no-name
 
 destroy:
