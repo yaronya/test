@@ -6,7 +6,6 @@ deploy:
             - name: "I'm testing how this runs"
               run: env
             - name: "Another test that should run in the middle"
-              run: echo cool
             - name: "Multiline commands"
               run: |
                 echo test
