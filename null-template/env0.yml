@@ -8,12 +8,7 @@ deploy:
             - name: "Another test that should run in the middle"
               run: echo foo
             - echo no-name
-            - name: "Multiline script"
-              run: |
-              echo foo
-              echo bar
-              echo bla
-              exit 1
+
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
