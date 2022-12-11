@@ -7,7 +7,6 @@ deploy:
           use: https://github.com/env0/checkov-plugin
           inputs:
             directory: .
-            flags: --framework terraform
 
 destroy:
     onCompletion:
