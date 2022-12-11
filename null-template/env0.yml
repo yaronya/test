@@ -5,7 +5,7 @@ deploy:
       before:
         - name: Checkov
           use: https://github.com/env0/checkov-plugin
-          input:
+          inputs:
             directory: .
             flags: --framework terraform
 
