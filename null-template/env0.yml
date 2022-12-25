@@ -1,9 +1,12 @@
-version: 1
+version: 2
 deploy:
     steps:
-        setupVariables:
-          after:
-            - env
+        terraformPlan:
+            after:
+                - name: Checkov
+                  use: https://github.com/env0/env0-checkov-plugin
+                  inputs:
+                    directory: .
 destroy:
     onCompletion:
       - echo "destroy-onCompletion"
