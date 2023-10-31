@@ -10,7 +10,7 @@ deploy:
                 echo test
                 echo foo
                 echo bar
-            - name: "Testing env vars"
+            - name: "Testing env vars 2"
               run: env
               env:
                 yaron1: $sadasd
