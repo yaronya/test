@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    aws        = "~> 3.70.0"
+  }
+}
+
+provider "aws" {
+  region  = "us-east-1"
+}
+
 resource "aws_elasticache_cluster" "example" {
   cluster_id           = "yaron-test-cluster-2"
   engine               = "redis"
