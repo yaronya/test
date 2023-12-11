@@ -1,15 +1,5 @@
-terraform {
-  required_providers {
-    aws        = "~> 3.70.0"
-  }
-}
-
-provider "aws" {
-  region  = "us-east-1"
-}
-
 resource "aws_elasticache_cluster" "example" {
-  cluster_id           = "yaron-test-cluster-3"
+  cluster_id           = "yaron-test-cluster-4"
   engine               = "redis"
   node_type            = "cache.m4.large"
   num_cache_nodes      = 1
