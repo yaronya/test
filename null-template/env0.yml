@@ -10,7 +10,7 @@ deploy:
     terraformPlan:
       after:
         - pwd
-        - cd ..
+        - cd .. && pwd
         - pwd
         - terragrunt show -json ../.env0workdir/.tf-plan >> tfplan.json
         - ./opa eval --format pretty -i tfplan.json -d ./opa-policies/aws/tag_resources.rego --fail "data.aws.tagging.violation"
