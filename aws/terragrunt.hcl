@@ -1,1 +1,3 @@
-# bla
+terraform {
+  source = "./module"
+}
