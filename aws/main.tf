@@ -9,5 +9,5 @@ provider "aws" {
 }
 
 module "elsaticcache" {
-  source = "module"
+  source = "./module"
 }
