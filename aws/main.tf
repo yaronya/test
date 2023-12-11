@@ -8,6 +8,10 @@ provider "aws" {
   region  = "us-east-1"
 }
 
+module "elsaticcache" {
+  source = "module"
+}
+
 resource "random_string" "random" {
   length = "16"
   special = "false"
