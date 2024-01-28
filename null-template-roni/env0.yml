@@ -1,0 +1,9 @@
+version: 1
+deploy:
+    steps:
+        setupVariables:
+          after:
+            - env
+destroy:
+    onCompletion:
+      - echo "destroy-onCompletion"
