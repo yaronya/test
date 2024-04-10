@@ -1,13 +1,3 @@
-terraform {
-  required_providers {
-    aws        = "~> 3.70.0"
-  }
-}
-
-provider "aws" {
-  region  = "us-east-1"
-}
-
 resource "random_string" "random" {
   length = "16"
   special = "false"
