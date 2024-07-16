@@ -1,7 +1,7 @@
 resource "null_resource" "null" {
 }
 
-resource "null_resource" "null222222333sss334" {
+resource "null_resource" "null222222333s22ss334" {
 }
 
 output "yaron" {
