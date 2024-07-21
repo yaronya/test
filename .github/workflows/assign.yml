@@ -1,0 +1,15 @@
+name: Add PR Reviewers
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  add-reviewers:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.issue.pull_request != null && github.event.comment.body == '/review' }}
+    steps:
+      - name: Set PR Reviewers
+        uses: hkusu/review-assign-action@v1
+        with:
+          reviewers: 'PR Reviewers'
