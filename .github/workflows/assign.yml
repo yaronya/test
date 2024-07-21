@@ -10,7 +10,11 @@ jobs:
     if: ${{ github.event.issue.pull_request != null && github.event.comment.body == '/review' }}
     steps:
       - name: Set PR Reviewers
-        uses: LongOddCode/assign-reviewer@0.2.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          reviewers: '["PR Reviewers"]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.issue.number }}/requested_reviewers \
+          -d '{"reviewers":["PR Reviewers"]}'
