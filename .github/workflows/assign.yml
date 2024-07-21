@@ -10,6 +10,6 @@ jobs:
     if: ${{ github.event.issue.pull_request != null && github.event.comment.body == '/review' }}
     steps:
       - name: Set PR Reviewers
-        uses: hkusu/review-assign-action@v1
+        uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
         with:
           reviewers: 'PR Reviewers'
