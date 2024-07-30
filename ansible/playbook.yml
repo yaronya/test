@@ -4,4 +4,4 @@
   tasks:
     - name: Print the value of hey
       debug:
-        msg: "The value of hey is"
+        msg: "The value of hey is 4"
