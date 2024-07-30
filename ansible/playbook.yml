@@ -1,7 +1,5 @@
----
-- name: Create a local folder
-  hosts: localhost
+- hosts: localhost
   tasks:
-    - name: Print the value of hey
+    - name: Print the variable
       debug:
-        msg: "The value of hey is 4"
+        msg: "{{ my_extra_var }}"
