@@ -1,7 +1,8 @@
 ---
-- name: Create a local folder
+- name: Example playbook to show change on the second run
   hosts: localhost
   tasks:
-    - name: Print the value of hey
-      debug:
-        msg: "The value of hey is 2"
+    - name: Create a file with initial content
+      copy:
+        dest: /tmp/example_file.txt
+        content: "This is the initial content.\n"
