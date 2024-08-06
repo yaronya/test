@@ -4,7 +4,7 @@ resource "random_string" "random" {
   min_lower = "16"
 }
 
-resource "null_resource" "test" {}
+resource "null_resource" "test2" {}
 
 output "yaron1" {
   value       = random_string.random.result
