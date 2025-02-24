@@ -1,0 +1,9 @@
+version: 2
+deploy:
+  steps:
+    terraformApply:
+      before:
+        - name: Set Apply Role
+          run: |
+            echo "Setting Apply Role to ${ENV0_APPLY_AWS_ROLE_ARN}"
+            echo "ENV0_AWS_ROLE_ARN=${ENV0_APPLY_AWS_ROLE_ARN}" >> $ENV0_ENV
