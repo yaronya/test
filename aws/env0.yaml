@@ -6,4 +6,8 @@ deploy:
         - name: Set Apply Role
           run: |
             echo "Setting Apply Role to ${ENV0_APPLY_AWS_ROLE_ARN}"
-            echo "ENV0_AWS_ROLE_ARN=${ENV0_APPLY_AWS_ROLE_ARN}" >> $ENV0_ENV
+            role_output=$(aws sts assume-role --role-arn "${ENV0_APPLY_AWS_ROLE_ARN}" --role-session-name "${ENV0_DEPLOYMENT_LOG_ID}")
+            
+            echo "AWS_ACCESS_KEY_ID=$(echo "$role_output" | jq -r '.Credentials.AccessKeyId')" >> $ENV0_ENV
+            echo "AWS_SECRET_ACCESS_KEY=$(echo "$role_output" | jq -r '.Credentials.SecretAccessKey')" >> $ENV0_ENV
+            echo "AWS_SESSION_TOKEN=$(echo "$role_output" | jq -r '.Credentials.SessionToken')" >> $ENV0_ENV 
