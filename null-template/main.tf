@@ -1,22 +1,8 @@
-terraform {
-  required_providers {
-    aws        = "~> 3.70.0"
-  }
+resource "null_resource" "one" {
 }
 
-provider "aws" {
-  region  = "us-east-1"
+resource "null_resource" "two" {
 }
 
-resource "random_string" "random" {
-  length = "16"
-  special = "false"
-  min_lower = "16"
+resource "null_resource" "six" {
 }
-
-resource "aws_s3_bucket" "yaron2443" {
-  bucket = "yaron-tessst-${random_string.random.result}"
-  force_destroy = true
-}
-
-
