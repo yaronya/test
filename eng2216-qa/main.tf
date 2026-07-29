@@ -4,6 +4,6 @@ data "external" "slow_plan" {
 
 resource "null_resource" "eng2216" {
   triggers = {
-    marker = "eng2216-qa-v1"
+    marker = "eng2216-qa-case-c"
   }
 }
